@@ -1,5 +1,5 @@
 # style-ui
->  参考Element UI 造的基于Vue2.x的前端UI框架
+>  参考Element UI 造的基于Vue2.x的前端UI框架（未完待续）
 
 ## 安装
 ```
@@ -16,7 +16,7 @@ npm install  style-ui -S
   // 注册组件库
   Vue.use(StyleUI)
   ```
-  
+
  在项目中使用组件
 ```
 <template>
