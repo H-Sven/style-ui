@@ -1,9 +1,11 @@
 // 导入组件
 import Dialog from './dialog/index';
+import Button from './button/index';
 
 // 存储组件列表
 const components = [
-  Dialog
+  Dialog,
+  Button
 ]
 
 // 定义install方法，接受Vue作为参数。如果使用user组件组件，则所有的组件都将被注册
@@ -26,5 +28,5 @@ export default {
   // 导出的对象必须具有install,才能被Vue.user()方法安装
   install,
   // 以下是具体需要导出的组件列表
-  Dialog
+  ...components
 }

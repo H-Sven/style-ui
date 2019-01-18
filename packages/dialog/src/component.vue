@@ -53,11 +53,12 @@ export default {
     overflow: auto;
     z-index: 1024;
     background-color: rgba(0,0,0,.3);
+    color: @textColor;
     .style_dialog {
       position: relative;
       margin: 0 auto 50px;
       min-height: 200px;
-      background: #fff;
+      background: @white;
       border-radius: 4px;
       box-shadow: 0 1px 3px rgba(255,255,255,.3);
       box-sizing: border-box;
@@ -74,7 +75,7 @@ export default {
         transition: all .2s ease-in-out;
       }
       .close:hover {
-        color: #409eff;
+        color: @409eff;
         transition: all .2s ease-in-out;
         transform: rotate(225deg);
       }
@@ -84,7 +85,6 @@ export default {
         .title {
           line-height: 24px;
           font-size: 18px;
-          color: #303133;
         }
       }
       .dialog_body {
@@ -98,20 +98,6 @@ export default {
         width: 100%;
         display: flex;
         justify-content: flex-end;
-        .sy-button{
-          width: 100px;
-          height: 40px;
-          margin-left: 15px;
-          background-color: #fff;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          color: #333;
-          cursor: pointer;
-        }
-        .sy-button--primary {
-          background-color: #409eff;
-          color: #fff;
-        }
       }
       .dialog_center {
         justify-content: center;
