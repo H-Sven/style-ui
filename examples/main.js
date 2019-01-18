@@ -3,10 +3,11 @@ import App from "./App.vue";
 import router from "./router";
 
 // 导入组件库
-import StyleUI from 'style-ui'
-import 'style-ui/lib/style-ui.css'
+// import StyleUI from 'style-ui'
+import StyleDialog from './../packages/index'
+// import 'style-ui/lib/style-ui.css'
 // 注册组件库
-Vue.use(StyleUI)
+Vue.use(StyleDialog)
 
 Vue.config.productionTip = false;
 new Vue({

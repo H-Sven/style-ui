@@ -1,11 +1,12 @@
 <template>
   <div class="home">
     <button @click="dialogShow">显示Dialog</button>
-    <style-dialog
-      title="提示Title"
-      :showDialoa="isShowDia"
-      @close-dialog="closeDia"
-    >
+    <style-dialog title="提示标题" :showDialoa="isShowDia" @close-dialog="isShowDia = false">
+      <div class="dialog_box">313123123123</div>
+      <div slot="footer">
+        <button type="button" class="sy-button sy-button--primary" @click="confirmDialog">确定</button>
+        <button type="button" class="sy-button" @click="closeDialog">取消</button>
+      </div>
     </style-dialog>
   </div>
 </template>
@@ -21,14 +22,18 @@ export default {
     }
   },
   methods: {
+    // 显示
      dialogShow () {
-      // this.isShowDia = !this.isShowDia;
       this.isShowDia = true;
     },
-    closeDia(status){
-      console.log(status);
-      this.isShowDia = status;
-    }
+    // 确定
+    confirmDialog(){
+      this.isShowDia = false;
+    },
+    // 取消
+    closeDialog(){
+      this.isShowDia = false;
+    },
   }
 };
 </script>
