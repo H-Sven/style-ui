@@ -21,7 +21,11 @@ npm install  style-ui -S
 ```
 <template>
   <div>
-    <Input v-model="value" />
+    <style-button>默认按钮</style-button>
+    <style-button type="primary">主要按钮</style-button>
+    <style-button type="success">成功按钮</style-button>
+    <style-button type="warning">警告按钮</style-button>
+    <style-button type="danger">错误按钮</style-button>
   </div>
 </template>
 ```
