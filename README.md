@@ -4,6 +4,7 @@
 - [x] Button
 - [x] Toast
 ~~Radio~~
+~~Checkbox~~
 
 ## 预览
 ![](./examples/assets/dialog.png)
