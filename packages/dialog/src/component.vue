@@ -1,16 +1,24 @@
 <template>
-  <div class="dialog_wrapper" v-if="showDialoa" ref="dialog">
-    <div class="style_dialog" :style="{'width':width}">
-      <botton class="close" @click="closeDialog">+</botton>
-      <div class="dialog_header" :class="{'dialog_center':center}">
-        <slot name="header">{{title}}</slot>
-      </div>
-      <div class="dialog_body"><slot></slot></div>
-      <div class="dialog_footer" :class="{'dialog_center':center}">
-        <slot name="footer"></slot>
+  <transition 
+    name="dialog-fade"
+    enter-class="dialog-fade-enter"
+    enter-active-class="dialog-fade-active"
+    leave-class="fade-out-enter"
+    leave-active-class="fade-out-active"
+  >
+    <div class="dialog_wrapper" v-if="showDialoa" ref="dialog">
+      <div class="style_dialog" :style="{'width':width}">
+        <div class="close" @click="closeDialog">+</div>
+        <div class="dialog_header" :class="{'dialog_center':center}">
+          <slot name="header">{{title}}</slot>
+        </div>
+        <div class="dialog_body"><slot></slot></div>
+        <div class="dialog_footer" :class="{'dialog_center':center}">
+          <slot name="footer"></slot>
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
    
 <script>
@@ -103,5 +111,12 @@ export default {
         justify-content: center;
       }
     }
+  }
+  .dialog-fade-active, .fade-out-active{
+    transition: all .3s ease-out;
+  } 
+  .dialog-fade-enter, .fade-out-active{
+    transform: scale(1.2);
+    opacity: 0;
   }
 </style>

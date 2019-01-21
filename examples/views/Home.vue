@@ -84,7 +84,7 @@ export default {
     },
     // 显示toast
     showToast(){
-      this.$toast("你好",3000);
+      this.$toast("Hello World",3000);
       // setTimeout(() => {
       //   this.$toast("你好3213123123");
       // }, 3000);
