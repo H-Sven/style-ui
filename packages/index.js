@@ -1,11 +1,13 @@
 // 导入组件
 import Dialog from './dialog/index';
 import Button from './button/index';
+// import Toast from './toast';
 
 // 存储组件列表
 const components = [
   Dialog,
-  Button
+  Button,
+  // Toast
 ]
 
 // 定义install方法，接受Vue作为参数。如果使用user组件组件，则所有的组件都将被注册
@@ -15,6 +17,7 @@ const install = function (Vue) {
   install.installed = true
   // 遍历注册全局组件
   components.forEach(component => {
+    console.log(component.name);
     Vue.component(component.name, component);
   });
 }

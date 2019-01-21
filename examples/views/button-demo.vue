@@ -3,7 +3,7 @@
     <br/>
     <br/>
     <style-button @click="dialogShow">默认按钮</style-button>
-    <style-button type="primary" @click="showToast" >主要按钮</style-button>
+    <style-button type="primary" >主要按钮</style-button>
     <style-button type="success" >成功按钮</style-button>
     <style-button type="warning" >警告按钮</style-button>
     <style-button type="danger" >错误按钮</style-button>
@@ -81,13 +81,6 @@ export default {
     // 显示
      dialogShow () {
       this.isShowDia = true;
-    },
-    // 显示toast
-    showToast(){
-      this.$toast("你好",3000);
-      // setTimeout(() => {
-      //   this.$toast("你好3213123123");
-      // }, 3000);
     },
     // 确定
     confirmDialog(){

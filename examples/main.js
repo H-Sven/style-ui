@@ -4,10 +4,12 @@ import router from "./router";
 
 // 导入组件库
 // import StyleUI from 'style-ui'
-import StyleButton from './../packages/index'
 // import 'style-ui/lib/style-ui.css'
+import StyleUI from './../packages/index'
+import Toast from './../packages/toast'
 // 注册组件库
-Vue.use(StyleButton)
+Vue.use(StyleUI)
+Vue.use(Toast)
 
 Vue.config.productionTip = false;
 new Vue({
