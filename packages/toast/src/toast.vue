@@ -22,19 +22,17 @@ export default {
 <style lang='less'>
 .toast {
   position: fixed;
-  top: 40%;
+  width: 400px;
+  top: 5%;
   left: 50%;
-  margin-left: -15vw;
-  padding: 2vw;
-  width: 30vw;
-  font-size: 4vw;
-  color: #fff;
+  margin-left: -200px;
+  padding: 13px 20px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 5vw;
+  border-radius: 4px;
+  color: @textColor;
+  background-color: @message;
   z-index: 999;
 }
-
 .fade-enter-active,
 .fade-leave-active {
   transition: 0.3s ease-out;
@@ -42,9 +40,5 @@ export default {
 .fade-enter {
   opacity: 0;
   transform: scale(1.2);
-}
-.fade-leave-to {
-  opacity: 0;
-  transform: scale(0.8);
 }
 </style>

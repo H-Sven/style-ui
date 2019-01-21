@@ -2,6 +2,11 @@
   <div class="home">
     <br/>
     <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <style-button @click="dialogShow">默认按钮</style-button>
     <style-button type="primary" @click="showToast" >主要按钮</style-button>
     <style-button type="success" >成功按钮</style-button>
