@@ -3,8 +3,10 @@
 - [x] Dialog
 - [x] Button
 - [x] Toast
-~~ - [x] Radio ~~ 
-~~ - [x] Checkbox~~
+  <br />
+~~ Radio ~~ 
+  <br />
+~~ Checkbox~~
 
 ## 预览
 ![](./examples/assets/dialog.png)
