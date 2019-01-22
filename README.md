@@ -3,8 +3,8 @@
 - [x] Dialog
 - [x] Button
 - [x] Toast
-- [x] ~~Radio~~
-- [x] ~~Checkbox~~
+- [x] ~~Input~~
+- [x] ~~Card~~
 
 ## 预览
 ![](./examples/assets/dialog.png)

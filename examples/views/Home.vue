@@ -3,7 +3,8 @@
     <br/>
     <br/>
     <br/>
-    <br/>
+    <style-radio v-model="value" label="1" @change="getChange">radio测试1</style-radio>
+    <style-radio v-model="value" label="2" @change="getChange">radio测试2</style-radio>
     <br/>
     <br/>
     <br/>
@@ -84,7 +85,8 @@ export default {
   name: "home",
   data() {
     return {
-      isShowDia:false
+      isShowDia:false,
+      value:1,
     }
   },
   methods: {
@@ -112,6 +114,11 @@ export default {
     closeDialog(){
       this.isShowDia = false;
     },
+    // 测试radio
+    getChange(status){
+      this.value = status;
+      console.log(this.value,'status');
+    }
   }
 };
 </script>
