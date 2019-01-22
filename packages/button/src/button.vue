@@ -62,7 +62,7 @@ export default {
     transition: .1s;
     font-weight: 500;
     background: @white;
-    border: 1px solid @dcdfe6;
+    border: 1px solid @color_border_button;
     display: inline-block;
     line-height: 1;
     white-space: nowrap;
@@ -78,45 +78,46 @@ export default {
   }
   .style_button:hover,
   .style_button:focus {
-    color: @409eff;
-    border-color: @c6e2ff;
-    background-color: @ecf5ff;
+    color: @color_main;
+    border-color: @color_border_hover_focus_button;
+    background-color: @color_bg_hover_focus_button;
   }
   .style_button:active {
-    color: @3a8ee6;
-    border-color: @3a8ee6;
+    color: @color_active_button;
+    border-color: @color_active_button;
     outline: none;
   }
   .style_button.is_plain:focus, 
   .style_button.is_plain:hover {
     background: @white;
-    border-color: @409eff;
-    color: @409eff;
+    border-color: @color_main;
+    color: @color_main;
   }
   .style_button.is_disabled, 
   .style_button.is_disabled:focus, 
   .style_button.is_disabled:hover {
-    color: @c0c4cc;
+    color: @color_disabled;
     cursor: not-allowed;
     background-image: none;
     background-color: @white;
-    border-color: @ebeef5;
+    border-color: @color_border_disabled;
   }
+
   .style_button--text {
     border-color: transparent;
-    color: @409eff;
+    color: @color_main;
     background: transparent;
     padding-left: 0;
     padding-right: 0;
   }
   .style_button--text:focus, 
   .style_button--text:hover {
-    color: @66b1ff;
+    color: @color_hover_focus_main;
     border-color: transparent;
     background-color: transparent;
   }
   .style_button--text:active {
-    color: @3a8ee6;
+    color: @color_active_button;
     background-color: transparent;
   }
   .style_button--text.is_disabled, 
@@ -131,60 +132,103 @@ export default {
   // primary
   .style_button--primary {
     color: @white;
-    background-color: @409eff;
-    border-color: @409eff;
-  }
-  .style_button--primary.is_plain {
-    color: @409eff;
-    background: @ecf5ff;
-    border-color: @b3d8ff;
+    background-color: @color_main;
+    border-color: @color_main;
   }
   .style_button--primary.is_active, 
   .style_button--primary:active {
-    background: @3a8ee6;
-    border-color: @3a8ee6;
+    background: @color_active_button;
+    border-color: @color_active_button;
     color: @white;
   }
   .style_button--primary:focus, 
   .style_button--primary:hover {
-    background: @66b1ff;
-    border-color: @66b1ff;
+    background: @color_hover_focus_main;
+    border-color: @color_hover_focus_main;
     color: @white;
+  }
+  .style_button--primary.is_disabled, 
+  .style_button--primary.is_disabled:focus, 
+  .style_button--primary.is_disabled:hover, 
+  .style_button--primary:active {
+    color: @white;
+    background-color: @color_primary_disabled_button;
+    border-color: @color_primary_disabled_button;
+  }
+  .style_button--primary.is_plain {
+    color: @color_main;
+    background: @color_bg_hover_focus_button;
+    border-color: @color_border_primary_button;
+  }
+  .style_button--primary.is_plain:active, 
+  .style_button--primary.is_plain:focus, 
+  .style_button--primary.is_plain:hover {
+    color: @white;
+    background-color: @color_main;
+  }
+  .style_button--primary.is_plain:active{
+    color: @white;
+    background-color: @color_active_button;
+    border-color: @color_active_button;
+  }
+  .style_button--primary.is_plain.is_disabled, 
+  .style_button--primary.is_plain.is_disabled:active, 
+  .style_button--primary.is_plain.is_disabled:focus, 
+  .style_button--primary.is_plain.is_disabled:hover {
+    color: @color_primary_plain_disabled;
+    background-color: @color_bg_hover_focus_button;
+    border-color: color_bg_primary_hover_focus_button;
   }
   // success
   .style_button--success {
     color: @white;
-    background-color: @67c23a;
-    border-color: @67c23a;
+    background-color: @color_success_button;
+    border-color: @color_success_button;
   }
   .style_button--success.is_plain {
-    color: @67c23a;
-    background: @f0f9eb;
-    border-color: @c2e7b0;
+    color: @color_success_button;
+    background: @color_success_plain_button;
+    border-color: @color_success_border_plain_button;
   }
   .style_button--success.is_active, 
   .style_button--success:active {
-    background: @85ce61;
-    border-color: @85ce61;
+    background: @color_success_active_button;
+    border-color: @color_success_active_button;
     color: @white;
   }
   .style_button--success.is_plain:focus, 
   .style_button--success.is_plain:hover {
-    background: @67c23a;
-    border-color: @67c23a;
+    background: @color_success_button;
+    border-color: @color_success_button;
     color: @white;
   }
   .style_button--success.is_plain:active {
-    background: @5daf34;
-    border-color: @5daf34;
+    background:@color_success_active_plain_button;
+    border-color:@color_success_active_plain_button;
     color: @white;
     outline: none;
   }
   .style_button--success:focus, 
   .style_button--success:hover {
-    background: @85ce61;
-    border-color: @85ce61;
+    background: @color_success_active_button;
+    border-color: @color_success_active_button;
     color: @white;
+  }
+  .style_button--success.is_disabled, 
+  .style_button--success.is_disabled:focus, 
+  .style_button--success.is_disabled:hover, 
+  .style_button--success:active {
+    color: @white;
+    background-color: @color_success_disabled_button;
+    border-color: @color_success_disabled_button;
+  }
+  .style_button--success.is_plain.is_disabled, 
+  .style_button--success.is_plain.is_disabled:active, 
+  .style_button--success.is_plain.is_disabled:focus, 
+  .style_button--success.is_plain.is_disabled:hover {
+    color: @color_success_plain_disabled_button;
+    background-color: @color_success_plain_button;
+    border-color: @color_success_border_disabled_plain_button;
   }
 
 
@@ -194,73 +238,105 @@ export default {
   // warning
   .style_button--warning {
     color: @white;
-    background-color: @e6a23c;
-    border-color: @e6a23c;
+    background-color: @color_warning_button;
+    border-color: @color_warning_button;
   }
   .style_button--warning.is_plain {
-    color: @e6a23c;
-    background: @fdf6ec;
-    border-color: #f5dab1;
+    color: @color_warning_button;
+    background: @color_warning_plain_button;
+    border-color: @color_warning_border_plain_button;
   }
   .style_button--warning.is_plain:active {
-    background: @cf9236;
-    border-color: @cf9236;
+    background: @color_warning_active_plain_button;
+    border-color: @color_warning_active_plain_button;
     color: @white;
     outline: none;
   }
   .style_button--warning.is_plain:focus, 
   .style_button--warning.is_plain:hover {
-    background: @e6a23c;
-    border-color: @e6a23c;
+    background: @color_warning_button;
+    border-color: @color_warning_button;
     color: @white;
   }
   .style_button--warning.is_active, 
   .style_button--warning:active {
-    background: @ebb563;
-    border-color: @ebb563;
+    background: @color_warning_active_button;
+    border-color: @color_warning_active_button;
     color: @white;
   }
   .style_button--warning:focus,
   .style_button--warning:hover {
-    background: @ebb563;
-    border-color: @ebb563;
+    background: @color_warning_active_button;
+    border-color: @color_warning_active_button;
     color: @white;
+  }
+  .style_button--warning.is_disabled, 
+  .style_button--warning.is_disabled:focus, 
+  .style_button--warning.is_disabled:hover, 
+  .style_button--warning:active {
+    color: @white;
+    background-color: @color_warning_disabled_button;
+    border-color: @color_warning_disabled_button;
+  }
+  .style_button--warning.is_plain.is_disabled, 
+  .style_button--warning.is_plain.is_disabled:active, 
+  .style_button--warning.is_plain.is_disabled:focus, 
+  .style_button--warning.is_plain.is_disabled:hover {
+    color: @color_warning_plain_disabled_button;
+    background-color: @color_warning_plain_button;
+    border-color: @color_warning_border_disabled_plain_button;
   }
 
 
-  // danger
-  .style_button--danger {
+  // error
+  .style_button--error {
     color: @white;
-    background-color: @f56c6c;
-    border-color: @f56c6c;
+    background-color: @color_error_button;
+    border-color: @color_error_button;
   }
-  .style_button--danger.is_plain {
-    color: @f56c6c;
-    background: @fef0f0;
-    border-color: @fbc4c4;
+  .style_button--error.is_plain {
+    color: @color_error_button;
+    background: @color_error_plain_button;
+    border-color: @color_error_border_button;
   }
-  .style_button--danger.is_plain:focus, 
-  .style_button--danger.is_plain:hover {
-    background: @f56c6c;
-    border-color: @f56c6c;
+  .style_button--error.is_plain:focus, 
+  .style_button--error.is_plain:hover {
+    background: @color_error_button;
+    border-color: @color_error_button;
     color: @white;
   }
-  .style_button--danger.is_plain:active {
-    background: @dd6161;
-    border-color: @dd6161;
+  .style_button--error.is_plain:active {
+    background: @color_error_active_plain_button;
+    border-color: @color_error_active_plain_button;
     color: @white;
     outline: none;
   }
-  .style_button--danger.is_active, 
-  .style_button--danger:active {
-    background: @f78989;
-    border-color: @f78989;
+  .style_button--error.is_active, 
+  .style_button--error:active {
+    background: @color_error_active_button;
+    border-color: @color_error_active_button;
     color: @white;
   }
-  .style_button--danger:focus, 
-  .style_button--danger:hover {
-    background: @f78989;
-    border-color: @f78989;
+  .style_button--error:focus, 
+  .style_button--error:hover {
+    background: @color_error_active_button;
+    border-color: @color_error_active_button;
     color: @white;
+  }
+  .style_button--error.is_disabled, 
+  .style_button--error.is_disabled:focus, 
+  .style_button--error.is_disabled:hover, 
+  .style_button--error:active {
+    color: @white;
+    background-color: @color_error_disabled_button;
+    border-color: @color_error_disabled_button;
+  }
+  .style_button--error.is_plain.is_disabled, 
+  .style_button--error.is_plain.is_disabled:active, 
+  .style_button--error.is_plain.is_disabled:focus, 
+  .style_button--error.is_plain.is_disabled:hover {
+    color: @color_error_plain_disabled;
+    background-color: @color_error_plain_button;
+    border-color: @color_error_border_disabled_active_plain_button;
   }
 </style>

@@ -11,7 +11,7 @@
     <style-button type="primary" @click="showToast" >主要按钮</style-button>
     <style-button type="success" >成功按钮</style-button>
     <style-button type="warning" >警告按钮</style-button>
-    <style-button type="danger" >错误按钮</style-button>
+    <style-button type="error" >错误按钮</style-button>
     <br/>
     <br/>
     <br/>
@@ -19,7 +19,7 @@
     <style-button type="primary" plain >主要按钮</style-button>
     <style-button type="success" plain >成功按钮</style-button>
     <style-button type="warning" plain >警告按钮</style-button>
-    <style-button type="danger" plain >错误按钮</style-button>
+    <style-button type="error" plain >错误按钮</style-button>
     <br/>
     <br/>
     <br/>
@@ -27,7 +27,7 @@
     <style-button type="primary" round >主要按钮</style-button>
     <style-button type="success" round >成功按钮</style-button>
     <style-button type="warning" round >警告按钮</style-button>
-    <style-button type="danger" round >错误按钮</style-button>
+    <style-button type="error" round >错误按钮</style-button>
     <br/>
     <br/>
     <br/>
@@ -35,15 +35,23 @@
     <style-button type="primary" circle >主要按钮</style-button>
     <style-button type="success" circle >成功按钮</style-button>
     <style-button type="warning" circle >警告按钮</style-button>
-    <style-button type="danger" circle >错误按钮</style-button>
+    <style-button type="error" circle >错误按钮</style-button>
     <br/>
     <br/>
     <br/>
     <style-button disabled>默认按钮</style-button>
-    <style-button type="primary"disabled>主要按钮</style-button>
-    <style-button type="success"disabled>成功按钮</style-button>
-    <style-button type="warning"disabled>警告按钮</style-button>
-    <style-button type="danger" disabled>错误按钮</style-button>
+    <style-button type="primary" disabled>主要按钮</style-button>
+    <style-button type="success" disabled>成功按钮</style-button>
+    <style-button type="warning" disabled>警告按钮</style-button>
+    <style-button type="error" disabled>错误按钮</style-button>
+    <br/>
+    <br/>
+    <br/>
+    <style-button disabled plain>默认按钮</style-button>
+    <style-button type="primary" disabled plain>主要按钮</style-button>
+    <style-button type="success" disabled plain>成功按钮</style-button>
+    <style-button type="warning" disabled plain>警告按钮</style-button>
+    <style-button type="error" disabled plain>错误按钮</style-button>
     <br/>
     <br/>
     <br/>
@@ -89,7 +97,9 @@ export default {
     },
     // 显示toast
     showToast(){
-      this.$toast("Hello World",3000);
+      this.$toast("Hello World",3000,{
+        type:'error'
+      });
       // setTimeout(() => {
       //   this.$toast("你好3213123123");
       // }, 3000);

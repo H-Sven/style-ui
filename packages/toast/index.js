@@ -12,7 +12,8 @@ ToastComponent.install = Vue => {
   document.body.appendChild(instance.$el)
 
   // 通过Vue的原型注册一个方法
-  Vue.prototype.$toast = (msg,duration = 2000) => {
+  Vue.prototype.$toast = (msg,duration = 3000,options ={}) => {
+    instance.options = options;
     instance.message = msg;
     instance.show = true;
     // 时间到自动关闭

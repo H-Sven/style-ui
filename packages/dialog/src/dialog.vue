@@ -61,7 +61,7 @@ export default {
     overflow: auto;
     z-index: 1024;
     background-color: rgba(0,0,0,.3);
-    color: @textColor;
+    color: @color_text;
     .style_dialog {
       position: relative;
       margin: 0 auto 50px;
@@ -83,7 +83,7 @@ export default {
         transition: all .2s ease-in-out;
       }
       .close:hover {
-        color: @409eff;
+        color: @color_main;
         transition: all .2s ease-in-out;
         transform: rotate(225deg);
       }

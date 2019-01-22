@@ -1,5 +1,5 @@
 # style-ui
->  参考Element UI 造的基于Vue2.x的前端UI框架（未完待续）
+>  参考Element UI 造的基于Vue2.x的前端UI组件库（未完待续）
 - [x] Dialog
 - [x] Button
 - [x] Toast
@@ -35,7 +35,7 @@ npm install  style-ui -S
     <style-button type="primary">主要按钮</style-button>
     <style-button type="success">成功按钮</style-button>
     <style-button type="warning">警告按钮</style-button>
-    <style-button type="danger">错误按钮</style-button>
+    <style-button type="error">错误按钮</style-button>
   </div>
 </template>
 ```
