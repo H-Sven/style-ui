@@ -3,13 +3,15 @@ import Dialog from './dialog/index';
 import Button from './button/index';
 import Toast from './toast/index';
 import Radio from './radio/index';
+import Loading from './loading/index';
 
 // 存储组件列表
 const components = [
   Dialog,
   Button,
   Toast,
-  Radio
+  Radio,
+  Loading
 ]
 
 // 定义install方法，接受Vue作为参数。如果使用user组件组件，则所有的组件都将被注册
@@ -23,6 +25,7 @@ const install = function (Vue) {
   });
   // 注册全局方法组件
   Vue.use(Toast)
+  Vue.use(Loading)
 }
 
 // 判断是否直接引入文件

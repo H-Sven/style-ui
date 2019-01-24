@@ -60,7 +60,7 @@ export default {
     right: 0;
     overflow: auto;
     z-index: 1024;
-    background-color: rgba(0,0,0,.3);
+    background-color: @color_rgba;
     color: @color_text;
     .style_dialog {
       position: relative;

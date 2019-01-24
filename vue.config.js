@@ -18,6 +18,7 @@ module.exports = {
       preProcessor: 'less',
       patterns: [
         path.resolve(__dirname, './static/colorConfig.less'),
+        path.resolve(__dirname, './static/animation.less'),
       ]
     }
   }

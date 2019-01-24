@@ -3,65 +3,17 @@
     <br/>
     <br/>
     <br/>
-    <style-radio v-model="value" label="1" @change="getChange">radio测试1</style-radio>
-    <style-radio v-model="value" label="2" @change="getChange">radio测试2</style-radio>
-    <br/>
-    <br/>
-    <br/>
+    <div style="width:500px;height:300px;background:#f1f3f4;position:absolute">
+      测试Loading组件
+      <style-loading :loading="true"></style-loading>
+    </div>
     <style-button @click="dialogShow">默认按钮</style-button>
     <style-button type="primary" @click="showToast" >主要按钮</style-button>
-    <style-button type="success" >成功按钮</style-button>
+    <style-button type="success" @click="showLoading" >成功按钮</style-button>
     <style-button type="warning" >警告按钮</style-button>
     <style-button type="error" >错误按钮</style-button>
-    <br/>
-    <br/>
-    <br/>
-    <style-button plain>默认按钮</style-button>
-    <style-button type="primary" plain >主要按钮</style-button>
-    <style-button type="success" plain >成功按钮</style-button>
-    <style-button type="warning" plain >警告按钮</style-button>
-    <style-button type="error" plain >错误按钮</style-button>
-    <br/>
-    <br/>
-    <br/>
-    <style-button round>默认按钮</style-button>
-    <style-button type="primary" round >主要按钮</style-button>
-    <style-button type="success" round >成功按钮</style-button>
-    <style-button type="warning" round >警告按钮</style-button>
-    <style-button type="error" round >错误按钮</style-button>
-    <br/>
-    <br/>
-    <br/>
-    <style-button circle>默认按钮</style-button>
-    <style-button type="primary" circle >主要按钮</style-button>
-    <style-button type="success" circle >成功按钮</style-button>
-    <style-button type="warning" circle >警告按钮</style-button>
-    <style-button type="error" circle >错误按钮</style-button>
-    <br/>
-    <br/>
-    <br/>
-    <style-button disabled>默认按钮</style-button>
-    <style-button type="primary" disabled>主要按钮</style-button>
-    <style-button type="success" disabled>成功按钮</style-button>
-    <style-button type="warning" disabled>警告按钮</style-button>
-    <style-button type="error" disabled>错误按钮</style-button>
-    <br/>
-    <br/>
-    <br/>
-    <style-button disabled plain>默认按钮</style-button>
-    <style-button type="primary" disabled plain>主要按钮</style-button>
-    <style-button type="success" disabled plain>成功按钮</style-button>
-    <style-button type="warning" disabled plain>警告按钮</style-button>
-    <style-button type="error" disabled plain>错误按钮</style-button>
-    <br/>
-    <br/>
-    <br/>
-    <style-button type="text">文字按钮</style-button>
-    <style-button type="text" disabled>文字按钮</style-button>
-    <br/>
-    <br/>
-    <br/>
-    <style-button type="primary"  :loading="true">加载中</style-button>
+
+    <style-loading></style-loading>
     <br/>
     <br/>
     <br/>
@@ -105,6 +57,12 @@ export default {
       // setTimeout(() => {
       //   this.$toast("你好3213123123");
       // }, 3000);
+    },
+    showLoading(){
+      this.$loading.show()
+      setTimeout(() => {
+        this.$loading.close()
+      }, 3000);
     },
     // 确定
     confirmDialog(){

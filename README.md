@@ -3,6 +3,7 @@
 - [x] Dialog
 - [x] Button
 - [x] Toast
+- [x] Loading
 - [x] ~~Input~~
 - [x] ~~Card~~
 
